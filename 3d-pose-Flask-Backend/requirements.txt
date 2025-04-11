@@ -1,5 +1,6 @@
 flask
 flask-socketio
+eventlet
 opencv-python
 mediapipe
 numpy
