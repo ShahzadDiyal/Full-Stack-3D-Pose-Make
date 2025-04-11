@@ -83,6 +83,9 @@ def handle_start_tracking():
 def handle_stop_tracking():
     global tracking
     tracking = False
+    if cap:
+        cap.release()
+        cv2.destroyAllWindows()
     emit('status', {'message': 'Tracking stopped'})
 
 @app.route('/video_feed')
